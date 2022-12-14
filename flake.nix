@@ -127,6 +127,7 @@
       lenovo-thinkpad-x280 = import ./lenovo/thinkpad/x280;
       lenovo-thinkpad-z = import ./lenovo/thinkpad/z;
       lenovo-thinkpad-z13 = import ./lenovo/thinkpad/z/z13;
+      mediatek-mt7921k = import ./mediatek/mt7921k;
       microsoft-surface = import ./microsoft/surface;
       microsoft-surface-pro-3 = import ./microsoft/surface-pro/3;
       msi-gs60 = import ./msi/gs60;

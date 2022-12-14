@@ -211,3 +211,11 @@ See code for all available configurations.
 | [System76 Darter Pro 6](system76/darp6)                             | `<nixos-hardware/system76/darp6>`                  |
 | [Toshiba Chromebook 2 `swanky`](toshiba/swanky)                     | `<nixos-hardware/toshiba/swanky>`                  |
 | [Tuxedo InfinityBook v4](tuxedo/infinitybook/v4)                    | `<nixos-hardware/tuxedo/infinitybook/v4>`          |
+
+## Other Hardware Devices
+
+### Wireless network cards
+
+| Model                                                               | Path                                               |
+| ------------------------------------------------------------------- | -------------------------------------------------- |
+| [MT7921K (RZ608) Wi-Fi 6E 80MHz](mediatek/mt7921k)                  | `<nixos-hardware/mediatek/mt7921k>`                |
