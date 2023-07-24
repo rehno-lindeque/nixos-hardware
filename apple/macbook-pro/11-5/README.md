@@ -43,6 +43,23 @@ nixosConfigurations = {
 };
 ```
 
+### Broken backlight on linux kernels > 6.1.4
+
+Unfortunately, as of linux kernel version 6.1.4 and later the backlight is turned off when using `amdgpu`, due to [this patch](https://patchwork.kernel.org/project/dri-devel/patch/20220712193910.439171-4-hdegoede@redhat.com/).
+
+The error message can be inspected with
+
+```
+$ journalctl --boot=-1 --dmesg | grep backlight
+kernel: amdgpu 0000:01:00.0: amdgpu: [drm] Skipping amdgpu atom DIG backlight registration
+```
+
+The `acpi_backlight` kernel parameter serves as a workaround for this problem:
+
+```nix
+boot.kernelParams = [ "acpi_backlight=native" ];
+```
+
 ## Power management
 
 You may also wish to look into dynamic switching between integrated and discrete graphics, but this config doesn't currently attempt it.
